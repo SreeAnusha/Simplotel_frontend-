@@ -1,1 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f9fb;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: #8a8a8a;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar a.active {
+  color: yellow;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.content {
+  background: #ff875a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  background: #8a8a8a;
+  padding: 2rem;
+  max-width: 380px;
+  width: 100%;
+}
+
+.card h2,
+.card p {
+  color: white;
+}
+
+button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dining-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.dining-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+
+  /* Navbar behaves like top stacked menu (not full height) */
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  .navbar a {
+    font-size: 1.1rem;
+  }
+
+  /* Content below navbar */
+  .container {
+    padding: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    margin-top: 1rem;
+  }
+}
+
 
